@@ -14,4 +14,12 @@ public class Cube : MonoBehaviour {
 	void Update () {
         tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime);
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "BULLET")
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+    }
 }
