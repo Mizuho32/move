@@ -41,10 +41,19 @@ public class PlayerMove : MonoBehaviour
         Debug.Log("H=" + h.ToString());
         Debug.Log("V=" + v.ToString());
 
+        // move
         tr.Translate(Vector3.forward * moveSpeed * speed * Time.deltaTime);
         tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime);
         tr.Translate(Vector3.up * moveSpeed * v * Time.deltaTime);
-        tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime * rotX);
-        tr.Rotate(Vector3.left * rotSpeed * Time.deltaTime * rotY);
+
+        if (Input.GetMouseButton(1)) // right button, Roll
+        {
+            tr.Rotate(-Vector3.forward * rotSpeed * Time.deltaTime * rotX);
+        }
+        else // Pitch, Yaw
+        {
+            tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime * rotX);
+            tr.Rotate(Vector3.left * rotSpeed * Time.deltaTime * rotY);
+        }
     }
 }
