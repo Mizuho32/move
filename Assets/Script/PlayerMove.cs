@@ -36,7 +36,11 @@ public class PlayerMove : MonoBehaviour
         var wheel = -Input.GetAxis("Mouse ScrollWheel");
         if (wheel > 0 && speed > -1) speed -= 0.2f;
         if (wheel < 0 && speed < 1) speed += 0.2f;
-        if (Input.GetMouseButton(2)) speed = 0.0f;
+        if (Input.GetMouseButton(2))
+        {
+            speed = 0.0f;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
 
         Debug.Log("H=" + h.ToString());
         Debug.Log("V=" + v.ToString());
