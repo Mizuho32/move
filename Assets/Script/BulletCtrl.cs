@@ -18,7 +18,7 @@ public class BulletCtrl : MonoBehaviour
     {
         if (Mathf.Pow(tr.position.x, 2) + Mathf.Pow(tr.position.y, 2) + Mathf.Pow(tr.position.z, 2) >= 1000*1000)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }
