@@ -51,4 +51,19 @@ public class PlayerMove : MonoBehaviour
         tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime * rotX);
         tr.Rotate(Vector3.left * rotSpeed * Time.deltaTime * rotY);
     }
+
+    IEnumerator ColorOnCollide()
+    {
+        var mat = GetComponent<Renderer>().material;
+        var col = mat.color;
+
+        mat.color = new Color(col.r, col.g, col.b, 1f);
+        yield return new WaitForSeconds(0.5f);
+        mat.color = new Color(col.r, col.g, col.b, 0.6f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        StartCoroutine(ColorOnCollide());
+    }
 }

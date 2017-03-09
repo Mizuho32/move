@@ -23,7 +23,7 @@ public class EnemyVortex : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(RandomFire(10, 3));
+        StartCoroutine(RandomFire(10, 2));
     }
 
     IEnumerator RandomFire(float spd, int count)
@@ -34,4 +34,12 @@ public class EnemyVortex : MonoBehaviour
             Instantiate(bullet, firepos.position, firepos.rotation).GetComponent<Rigidbody>().velocity = Random.onUnitSphere * spd;;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "BULLET")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
