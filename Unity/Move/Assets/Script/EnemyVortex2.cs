@@ -14,6 +14,7 @@ public class EnemyVortex2 : MonoBehaviour
     void Start()
     {
         tr = GetComponent<Transform>();
+        //Fire();
     }
 
     // Update is called once per frame
