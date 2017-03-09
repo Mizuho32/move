@@ -21,7 +21,7 @@ public class VortexBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.angularVelocity = new Vector3(0, 0, rotspeed*Time.deltaTime);
+        rb.angularVelocity = new Vector3(0.0f, 0.0f, rotspeed * Time.deltaTime);
         if (Mathf.Pow(tr.position.x, 2) + Mathf.Pow(tr.position.y, 2) + Mathf.Pow(tr.position.z, 2) >= 1000 * 1000)
         {
             Destroy(gameObject);

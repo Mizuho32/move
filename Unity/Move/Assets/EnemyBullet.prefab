@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
-  rotspeed: 100000
+  rotspeed: 1000
   radius: 3
 --- !u!135 &135014785649257904
 SphereCollider:
