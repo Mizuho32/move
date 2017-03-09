@@ -165,8 +165,8 @@ public class PlayerMove : MonoBehaviour
         {
             tr.Rotate(-Vector3.forward * rotSpeed * Time.deltaTime * _manyMouseMice[left].Delta.x);
         }
-        //else // Pitch, Yaw
-            tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime * rotX);
-            tr.Rotate(Vector3.left * rotSpeed * Time.deltaTime * rotY);
+        // Pitch, Yaw
+        tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime * rotX);
+        tr.Rotate(Vector3.left * rotSpeed * Time.deltaTime * rotY);
     }
 }
