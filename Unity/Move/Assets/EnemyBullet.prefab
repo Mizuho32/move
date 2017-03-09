@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23424843074786950}
   - component: {fileID: 54640138035860130}
   - component: {fileID: 114246261741293646}
+  - component: {fileID: 114837771463744950}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1605789848230122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.4889345, y: 1.071553, z: 49.813282}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 305c4578b27b4c941ad4674889fbcfd6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,13 +104,28 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605789848230122}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc4e362179595444e907eac60f40355f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
   bigspeed: 5
+  maxScale: 10
+--- !u!114 &114837771463744950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1605789848230122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af17142414ca41e408ae874a7ae40cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 500
+  rotspeed: 100000
+  radius: 3
 --- !u!135 &135014785649257904
 SphereCollider:
   m_ObjectHideFlags: 1

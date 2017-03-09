@@ -2625,6 +2625,7 @@ GameObject:
   - component: {fileID: 1432087808}
   - component: {fileID: 1432087807}
   - component: {fileID: 1432087806}
+  - component: {fileID: 1432087811}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2638,7 +2639,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1432087805}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de08cd9c265900b48a84a4e7a33e7e82, type: 3}
   m_Name: 
@@ -2715,6 +2716,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1432087811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432087805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c03886945942645812eaf188c6b4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firepos: {fileID: 653434156}
+  bullet: {fileID: 1605789848230122, guid: 8a7a2d75c95c5a24a812f2cbc069b1be, type: 2}
+  shootperiod: 0.1
 --- !u!1001 &1463848412
 Prefab:
   m_ObjectHideFlags: 0
