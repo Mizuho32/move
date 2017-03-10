@@ -12,16 +12,13 @@ public class PlayerMove : MonoBehaviour
     private float speed = 0.0f;
     private Transform tr;
 
-	private ManyMouse[] _manyMouseMice;
-    private bool[,] buttons;
-    private int[] wheels;
-    private Vector2[] deltas;
     private bool ready = false;
     private int right, left;
 
     public float moveSpeed = 30.0f;
     public float rotSpeed = 100.0f;
     public UnityEngine.UI.Text text;
+    public Camera maincam;
 
     //awake
     private void Awake()
@@ -96,7 +93,6 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-
     // Update is called once per frame
     void Update()
     {
@@ -122,12 +118,25 @@ public class PlayerMove : MonoBehaviour
         tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime);
         tr.Translate(Vector3.up * moveSpeed * v * Time.deltaTime);
 
-        if (MultiInput.GetMouseButton(left, 0)) // right button, Roll
+        if (MultiInput.GetMouseButton(left, 0)) // Roll by left mouse
         {
             tr.Rotate(-Vector3.forward * rotSpeed * Time.deltaTime * MultiInput.GetAxis(left, MultiInput.Axis.Mouse_X));
+        } else
+        {
+            // Camera rot
+            maincam.transform.Rotate(Vector3.up * rotSpeed * Time.deltaTime * MultiInput.GetAxis(left, MultiInput.Axis.Mouse_X));
+            maincam.transform.Rotate(Vector3.left * rotSpeed * Time.deltaTime * MultiInput.GetAxis(left, MultiInput.Axis.Mouse_Y));
         }
+
         // Pitch, Yaw
         tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime * rotX);
         tr.Rotate(Vector3.left * rotSpeed * Time.deltaTime * rotY);
+
+        // Rotate Camera
+        if (MultiInput.GetMouseButton(left, 2))
+        {
+            maincam.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+
     }
 }

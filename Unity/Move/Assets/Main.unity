@@ -337,6 +337,7 @@ MonoBehaviour:
   moveSpeed: 30
   rotSpeed: 50
   text: {fileID: 1516283621}
+  maincam: {fileID: 626470681}
 --- !u!65 &68331246
 BoxCollider:
   m_ObjectHideFlags: 0
