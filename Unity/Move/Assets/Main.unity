@@ -323,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1039398024282504, guid: 1c0082c34212a5d4e8ac3cd22fa81734, type: 2}
   firepos: {fileID: 1286886234}
+  maincam: {fileID: 626470681}
 --- !u!114 &68331245
 MonoBehaviour:
   m_ObjectHideFlags: 0

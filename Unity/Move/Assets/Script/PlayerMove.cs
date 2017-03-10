@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     private float rotY;
     private float speed = 0.0f;
     private Transform tr;
+    private Rigidbody rig;
 
     private bool ready = false;
     private int right, left;
@@ -19,6 +20,8 @@ public class PlayerMove : MonoBehaviour
     public float rotSpeed = 100.0f;
     public UnityEngine.UI.Text text;
     public Camera maincam;
+    
+    public bool IsReady { get { return ready; } }
 
     //awake
     private void Awake()
@@ -32,6 +35,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         tr = GetComponent<Transform>();
+        rig = GetComponent<Rigidbody>();
 
         MultiInput.Init(MultiInput.Mode.Multi);
 
@@ -109,15 +113,15 @@ public class PlayerMove : MonoBehaviour
         if (wheel < 0 && speed < 1) speed += 0.2f;
         if (MultiInput.GetMouseButton(right, 2)) speed = 0.0f;
 
-        Debug.Log(string.Format("H={0}, V={1}, X={2}, Y={3}", h.ToString(), v.ToString(), rotX, rotY));
+        //Debug.Log(string.Format("H={0}, V={1}, X={2}, Y={3}", h.ToString(), v.ToString(), rotX, rotY));
         //Debug.Log(string.Format("{0} {1}", MultiInput.Mice[left].Delta, MultiInput.Mice[right].Delta));
+        //Debug.Log(GetComponent<Rigidbody>().velocity);
 
 
         // move
-        tr.Translate(Vector3.forward * moveSpeed * speed * Time.deltaTime);
-        tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime);
-        tr.Translate(Vector3.up * moveSpeed * v * Time.deltaTime);
+        rig.velocity = transform.forward * moveSpeed * speed + Vector3.right * moveSpeed *h + Vector3.up * moveSpeed * v;
 
+        // Rotate
         if (MultiInput.GetMouseButton(left, 0)) // Roll by left mouse
         {
             tr.Rotate(-Vector3.forward * rotSpeed * Time.deltaTime * MultiInput.GetAxis(left, MultiInput.Axis.Mouse_X));
@@ -129,8 +133,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         // Pitch, Yaw
-        tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime * rotX);
-        tr.Rotate(Vector3.left * rotSpeed * Time.deltaTime * rotY);
+        rig.MoveRotation(rig.rotation * Quaternion.Euler(Vector3.up * rotSpeed * Time.deltaTime * rotX + Vector3.left * rotSpeed * Time.deltaTime * rotY));
 
         // Rotate Camera
         if (MultiInput.GetMouseButton(left, 2))
