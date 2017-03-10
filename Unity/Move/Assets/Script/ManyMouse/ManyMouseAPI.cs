@@ -62,7 +62,7 @@ public class MultiInput
 
     public static float GetAxis(int index, Axis axis)
     {
-        if (index + 1 >= _mice.Length || mode == Mode.Single)
+        if (index + 1 > _mice.Length || mode == Mode.Single)
             return 0f;
 
         switch (axis)
@@ -70,7 +70,7 @@ public class MultiInput
             case Axis.Mouse_X:
                 return _mice[index].Delta.x;
             case Axis.Mouse_Y:
-                return _mice[index].Delta.y;
+                return -_mice[index].Delta.y;
             case Axis.Mouse_ScrollWheel:
                 return _mice[index].MouseWheel;
             default:
@@ -88,10 +88,10 @@ public class MultiInput
 
     public static bool GetMouseButton(int index, int number)
     {
-        if (index + 1 >= _mice.Length || mode == Mode.Single)
+        if (index + 1 > _mice.Length || mode == Mode.Single)
             return false;
 
-        if (number + 1 >= _mice[index].MouseButtons.Length)
+        if (number + 1 > _mice[index].MouseButtons.Length)
             return false;
 
         return _mice[index].MouseButtons[number];

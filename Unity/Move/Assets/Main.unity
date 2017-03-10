@@ -321,8 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938ababdd1fb5814baa5fe2e44345c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  firepos: {fileID: 0}
+  bullet: {fileID: 1039398024282504, guid: 1c0082c34212a5d4e8ac3cd22fa81734, type: 2}
+  firepos: {fileID: 1286886234}
 --- !u!114 &68331245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
-  rotSpeed: 100
+  rotSpeed: 50
   text: {fileID: 1516283621}
 --- !u!65 &68331246
 BoxCollider:

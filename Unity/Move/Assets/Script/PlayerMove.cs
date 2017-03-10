@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -35,46 +36,9 @@ public class PlayerMove : MonoBehaviour
     {
         tr = GetComponent<Transform>();
 
-	    int numMice = ManyMouseWrapper.MouseCount;
-        buttons = new bool[numMice, 3];
-        wheels = new int[numMice];
-        deltas = new Vector2[numMice];
+        MultiInput.Init(MultiInput.Mode.Multi);
 
-        if (numMice > 0)
-        {
-            _manyMouseMice = new ManyMouse[numMice];
-            for (int i = 0; i < numMice; i++)
-            {
-                _manyMouseMice[i] = ManyMouseWrapper.GetMouseByID(i);
-                Debug.Log(_manyMouseMice[i].DeviceName);
-                _manyMouseMice[i].EventButtonDown += (ManyMouse mouse, int id) =>
-                {
-                    buttons[mouse.id, id] = true;
-                    Debug.Log(string.Format("{0} down", mouse.id));
-                };
-                _manyMouseMice[i].EventButtonUp += (ManyMouse mouse, int id) =>
-                {
-                    buttons[mouse.id, id] = false;
-                    Debug.Log(string.Format("{0} up", mouse.id));
-                };
-                /*_manyMouseMice[i].EventWheelScroll += (ManyMouse m, int delta) => {
-                    wheels[m.id] = delta;
-                    Debug.Log(string.Format("wheel{0}: {1}", m.id, delta));
-                };
-                _manyMouseMice[i].EventMouseDelta += (ManyMouse m, Vector2 delta) =>
-                {
-                    //deltas[m.id].x = delta.x;
-                    //deltas[m.id].y = delta.y;
-                    //deltas[m.id].x = m.Delta.x;
-                    //deltas[m.id].y = m.Delta.y;
-                    Debug.Log(string.Format("delta{0}: {1}", m.id, m.Delta));
-                };*/
-                //you'll want to pay attention to things disconnecting.
-                //_manyMouseMice[i].EventMouseDisconnected += EventMouseDisconnected;
-            }
-        }
-
-        StartCoroutine("mousemap");
+        StartCoroutine(mousemap());
     }
 
     IEnumerator mousemap()
@@ -83,16 +47,15 @@ public class PlayerMove : MonoBehaviour
 
         // Set Left Mouse
         while (true) {
-            var l = buttons.GetLength(0);
-            for(var i = 0; i < l; i++)
+            var clicked = MultiInput.Mice.Where(m => m.MouseButtons[0]);
+            if (clicked.Count() == 0)
             {
-                if (buttons[i, 0])
-                {
-                    Debug.Log(string.Format("{0} is Left", left = i));
-                    goto right;
-                }
+                yield return null;
+                continue;
             }
-            yield return null;
+
+            Debug.Log(string.Format("{0} is Left", left = clicked.ElementAt(0).id));
+            goto right;
         }
 
         right:
@@ -103,22 +66,20 @@ public class PlayerMove : MonoBehaviour
 
         // Set Right Mouse
         while (true) {
-            var l = buttons.GetLength(0);
-            for(var i = 0; i < l; i++)
+            var clicked = MultiInput.Mice.Where(m => m.MouseButtons[0]);
+            if (clicked.Count() == 0)
             {
-                if (buttons[i, 0])
-                {
-                    Debug.Log(string.Format("{0} is Right", right = i));
-                    goto fin;
-                }
+                yield return null;
+                continue;
             }
-            yield return null;
+
+            Debug.Log(string.Format("{0} is Right", right = clicked.ElementAt(0).id));
+            goto fin;
         }
 
         fin:
 
         text.text = string.Format("Left{0}, Right{1}", left, right);
-        //yield break;
         ready = true;
     }
 
@@ -144,16 +105,16 @@ public class PlayerMove : MonoBehaviour
 
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
-        rotX = _manyMouseMice[right].Delta.x;
-        rotY = -_manyMouseMice[right].Delta.y;
+        rotX = MultiInput.GetAxis(right, MultiInput.Axis.Mouse_X);
+        rotY = MultiInput.GetAxis(right, MultiInput.Axis.Mouse_Y);
 
-        var wheel = -_manyMouseMice[right].MouseWheel;
+        var wheel = -MultiInput.GetAxis(right, MultiInput.Axis.Mouse_ScrollWheel);
         if (wheel > 0 && speed > -1) speed -= 0.2f;
         if (wheel < 0 && speed < 1) speed += 0.2f;
-        if (_manyMouseMice[right].MouseButtons[2]) speed = 0.0f;
+        if (MultiInput.GetMouseButton(right, 2)) speed = 0.0f;
 
-        //Debug.Log(string.Format("H={0}, V={1}, X={2}, Y={3}", h.ToString(), v.ToString(), rotX, rotY));
-        Debug.Log(string.Format("{0} {1}", _manyMouseMice[left].Delta, _manyMouseMice[right].Delta));
+        Debug.Log(string.Format("H={0}, V={1}, X={2}, Y={3}", h.ToString(), v.ToString(), rotX, rotY));
+        //Debug.Log(string.Format("{0} {1}", MultiInput.Mice[left].Delta, MultiInput.Mice[right].Delta));
 
 
         // move
@@ -161,9 +122,9 @@ public class PlayerMove : MonoBehaviour
         tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime);
         tr.Translate(Vector3.up * moveSpeed * v * Time.deltaTime);
 
-        if (_manyMouseMice[left].MouseButtons[0]) // right button, Roll
+        if (MultiInput.GetMouseButton(left, 0)) // right button, Roll
         {
-            tr.Rotate(-Vector3.forward * rotSpeed * Time.deltaTime * _manyMouseMice[left].Delta.x);
+            tr.Rotate(-Vector3.forward * rotSpeed * Time.deltaTime * MultiInput.GetAxis(left, MultiInput.Axis.Mouse_X));
         }
         // Pitch, Yaw
         tr.Rotate(Vector3.up * rotSpeed * Time.deltaTime * rotX);
