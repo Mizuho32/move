@@ -12,34 +12,33 @@ public class EnemyVortex : MonoBehaviour
     public float dammyrotspeed = 360.0f;
     private Transform tr;
     private float sec = 0.0f;
-
     // Use this for initialization
     void Start()
     {
         tr = GetComponent<Transform>();
-        Random.InitState((int)Time.deltaTime*100);
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(RandomFire(10, 2));
-    }
-
-    IEnumerator RandomFire(float spd, int count)
-    {
-
-        yield return new WaitForSeconds(shootperiod);
-        for(var i = 0; i < count; i++)
-            Instantiate(bullet, firepos.position, firepos.rotation).GetComponent<Rigidbody>().velocity = Random.onUnitSphere * spd;;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.tag == "BULLET")
+        firepos.RotateAround(dammypos.position, dammypos.up, uprotspeed * Time.deltaTime);
+        dammypos.Rotate(transform.right, dammyrotspeed * Time.deltaTime);
+        sec += Time.deltaTime;
+        if (sec >= shootperiod)
         {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
+            Fire();
+            sec = 0.0f;
         }
+    }
+
+    void Fire()
+    {
+        StartCoroutine(this.CreateBullet());
+    }
+
+    IEnumerator CreateBullet()
+    {
+        Instantiate(bullet, firepos.position, firepos.rotation);
+        yield return null;
     }
 }
