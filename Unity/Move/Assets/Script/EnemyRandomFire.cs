@@ -7,6 +7,7 @@ public class EnemyRandomFire : MonoBehaviour
     public Transform firepos;
     public GameObject bullet;
     public float shootperiod = 1000.0f; //second
+    public float count = 2.0f;
     private Transform tr;
     private float sec = 0.0f;
 
@@ -20,13 +21,23 @@ public class EnemyRandomFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(RandomFire(10, 2));
+        sec += Time.deltaTime;
+        if (sec >= shootperiod)
+        {
+            Fire();
+            sec = 0.0f;
+        }
     }
 
-    IEnumerator RandomFire(float spd, int count)
+    void Fire()
+    {
+        StartCoroutine(RandomFire());
+    }
+
+    IEnumerator RandomFire()
     {
 
-        yield return new WaitForSeconds(shootperiod);
+        yield return null;
         for (var i = 0; i < count; i++)
             Instantiate(bullet, firepos.position, firepos.rotation);
             //Instantiate(bullet, firepos.position, firepos.rotation).GetComponent<Rigidbody>().velocity = Random.onUnitSphere * spd;
