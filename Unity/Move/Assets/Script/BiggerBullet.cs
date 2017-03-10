@@ -23,9 +23,5 @@ public class BiggerBullet : MonoBehaviour
         {
             tr.localScale += new Vector3(bigspeed * Time.deltaTime, bigspeed * Time.deltaTime, bigspeed * Time.deltaTime);
         }
-        if (Mathf.Pow(tr.position.x, 2) + Mathf.Pow(tr.position.y, 2) + Mathf.Pow(tr.position.z, 2) >= 1000 * 1000)
-        {
-            Destroy(gameObject);
-        }
     }
 }

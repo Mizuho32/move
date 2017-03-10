@@ -16,9 +16,6 @@ public class BulletCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Pow(tr.position.x, 2) + Mathf.Pow(tr.position.y, 2) + Mathf.Pow(tr.position.z, 2) >= 1000*1000)
-        {
-            Destroy(gameObject);
-        }
+
     }
 }

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23690015761912258}
   - component: {fileID: 54634561318762108}
   - component: {fileID: 114504136909222026}
+  - component: {fileID: 114703227425486392}
   m_Layer: 0
   m_Name: VortexBullet
   m_TagString: Untagged
@@ -109,8 +110,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
-  rotspeed: 360
+  rotspeed: 1000
   radius: 3
+--- !u!114 &114703227425486392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1421522402426252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5461597e3e9bc43b687b51e806c7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135403194175643714
 SphereCollider:
   m_ObjectHideFlags: 1

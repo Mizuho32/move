@@ -6,10 +6,7 @@ public class EnemyRandomFire : MonoBehaviour
 {
     public Transform firepos;
     public GameObject bullet;
-    public Transform dammypos;
     public float shootperiod = 1000.0f; //second
-    public float uprotspeed = 360.0f;
-    public float dammyrotspeed = 360.0f;
     private Transform tr;
     private float sec = 0.0f;
 
@@ -33,14 +30,5 @@ public class EnemyRandomFire : MonoBehaviour
         for (var i = 0; i < count; i++)
             Instantiate(bullet, firepos.position, firepos.rotation);
             //Instantiate(bullet, firepos.position, firepos.rotation).GetComponent<Rigidbody>().velocity = Random.onUnitSphere * spd;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "BULLET")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
     }
 }

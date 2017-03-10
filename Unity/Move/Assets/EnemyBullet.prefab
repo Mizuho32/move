@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 135014785649257904}
   - component: {fileID: 23424843074786950}
   - component: {fileID: 54640138035860130}
-  - component: {fileID: 114246261741293646}
-  - component: {fileID: 114837771463744950}
+  - component: {fileID: 114193677375581350}
+  - component: {fileID: 114743581404220490}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -98,34 +98,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &114246261741293646
+--- !u!114 &114193677375581350
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605789848230122}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc4e362179595444e907eac60f40355f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8202033d6e0e7264bbc1efd4521cd9e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
-  bigspeed: 5
-  maxScale: 10
---- !u!114 &114837771463744950
+  speed: 10
+--- !u!114 &114743581404220490
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605789848230122}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af17142414ca41e408ae874a7ae40cc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5461597e3e9bc43b687b51e806c7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 500
-  rotspeed: 1000
-  radius: 3
 --- !u!135 &135014785649257904
 SphereCollider:
   m_ObjectHideFlags: 1

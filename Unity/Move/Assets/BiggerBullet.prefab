@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 33526285557252516}
   - component: {fileID: 135840185787231728}
   - component: {fileID: 23472706840684552}
+  - component: {fileID: 54650874804567110}
+  - component: {fileID: 114105046502970144}
+  - component: {fileID: 114297131945331198}
   m_Layer: 0
   m_Name: BiggerBullet
   m_TagString: Untagged
@@ -55,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 48ab5a5270b3f4d4486e81bb0175e74e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,6 +83,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538959945521580}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54650874804567110
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538959945521580}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &114105046502970144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538959945521580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4e362179595444e907eac60f40355f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1000
+  bigspeed: 10
+  maxScale: 10
+--- !u!114 &114297131945331198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538959945521580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5461597e3e9bc43b687b51e806c7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135840185787231728
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -87,7 +130,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538959945521580}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
