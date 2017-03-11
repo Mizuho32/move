@@ -117,12 +117,17 @@ public class PlayerMove : MonoBehaviour
         //Debug.Log(string.Format("{0} {1}", MultiInput.Mice[left].Delta, MultiInput.Mice[right].Delta));
         //Debug.Log(GetComponent<Rigidbody>().velocity);
 
-
-        // move
-        rig.velocity = transform.forward * moveSpeed * speed + Vector3.right * moveSpeed *h + Vector3.up * moveSpeed * v;
-
-        // Rotate
-        if (MultiInput.GetMouseButton(left, 0)) // Roll by left mouse
+        if (MultiInput.GetMouseButton(left, 1))
+        {
+            // move by left mouse
+            h += MultiInput.GetAxis(left, MultiInput.Axis.Mouse_X) * 0.2f;
+            v += MultiInput.GetAxis(left, MultiInput.Axis.Mouse_Y) * 0.2f;
+        } else if (MultiInput.GetMouseButton(left, 2))
+        {
+            // Camera Rotate Reset
+            maincam.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (MultiInput.GetMouseButton(left, 0)) // Roll by left mouse
         {
             tr.Rotate(-Vector3.forward * rotSpeed * Time.deltaTime * MultiInput.GetAxis(left, MultiInput.Axis.Mouse_X));
         } else
@@ -132,14 +137,17 @@ public class PlayerMove : MonoBehaviour
             maincam.transform.Rotate(Vector3.left * rotSpeed * Time.deltaTime * MultiInput.GetAxis(left, MultiInput.Axis.Mouse_Y));
         }
 
-        // Pitch, Yaw
+
+        // move
+        var rot = transform.rotation;
+        rig.velocity = transform.forward * moveSpeed * speed + (rot*Vector3.right) * moveSpeed *h + (rot*Vector3.up) * moveSpeed * v;
+
+        // Rotate
+        // Rotate Pitch, Yaw
         rig.MoveRotation(rig.rotation * Quaternion.Euler(Vector3.up * rotSpeed * Time.deltaTime * rotX + Vector3.left * rotSpeed * Time.deltaTime * rotY));
 
-        // Rotate Camera
-        if (MultiInput.GetMouseButton(left, 2))
-        {
-            maincam.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
+
+        
 
     }
 }
