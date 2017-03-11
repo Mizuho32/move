@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 54870406978539058}
   - component: {fileID: 33862605857481022}
   - component: {fileID: 136253126998185470}
+  - component: {fileID: 114286522152423056}
+  - component: {fileID: 114592698603521666}
   m_Layer: 0
   m_Name: CapsuleBullet
   m_TagString: Untagged
@@ -55,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 1337343683246726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.0106087, y: -0.046676695, z: -32.17985}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4761630330004414}
   m_Father: {fileID: 0}
@@ -87,7 +89,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8f98470d399b4f34abe390a4e66b2a89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,6 +136,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114286522152423056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337343683246726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2db218e37e5ece40a2bf8a6b9a02fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2000
+  bigspeed: 1
+  maxScale: 10
+--- !u!114 &114592698603521666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337343683246726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5461597e3e9bc43b687b51e806c7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136253126998185470
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -154,7 +181,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259568981232740}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2

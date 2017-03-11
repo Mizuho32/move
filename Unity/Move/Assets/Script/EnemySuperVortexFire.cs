@@ -27,14 +27,21 @@ public class EnemySuperVortexFire : MonoBehaviour
     {
         for (int i = 0; i < dammyposX.Length; i++)
         {
-            if (changesec < changeperiod / 2.0f)
+            if (changesec < changeperiod / 4)
             {
                 dammyposX[i].Rotate(transform.right, Xrotspeed * Time.deltaTime);
                 dammyposY[i].Rotate(transform.up, Yrotspeed * Time.deltaTime);
             }
-            else
+            else if (changesec < changeperiod / 2)
+            {
+                dammyposY[i].Rotate(transform.up, Yrotspeed * Time.deltaTime);
+            }
+            else if (changesec < 3 * changeperiod / 4)
             {
                 dammyposX[i].Rotate(transform.right, -Xrotspeed * Time.deltaTime);
+            }
+            else
+            {
                 dammyposY[i].Rotate(transform.up, -Yrotspeed * Time.deltaTime);
             }
         }

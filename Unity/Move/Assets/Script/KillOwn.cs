@@ -5,7 +5,7 @@ using UnityEngine;
 public class KillOwn : MonoBehaviour
 {
     private Transform tr;
-    public static float Arealength = 1000.0f;
+    public static float Arealength = 300.0f;
     // Use this for initialization
     void Start()
     {

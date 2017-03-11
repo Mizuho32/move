@@ -3436,7 +3436,7 @@ MonoBehaviour:
   firepos: {fileID: 1901741654}
   bullet: {fileID: 1605789848230122, guid: 8a7a2d75c95c5a24a812f2cbc069b1be, type: 2}
   shootperiod: 0.05
-  count: 8
+  count: 10
 --- !u!114 &1432087813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3466,7 +3466,7 @@ MonoBehaviour:
   - {fileID: 1668574720}
   - {fileID: 2033026875}
   - {fileID: 1161394618}
-  bullet: {fileID: 1538959945521580, guid: a09f8c757e05b0d49a276cb8524e4bbd, type: 2}
+  bullet: {fileID: 1337343683246726, guid: 22cd9e1e660b57a42a480d916a8055c8, type: 2}
   dammyposX:
   - {fileID: 241852496}
   - {fileID: 503807823}
@@ -3481,9 +3481,9 @@ MonoBehaviour:
   - {fileID: 2137187246}
   - {fileID: 1722355003}
   - {fileID: 1128023138}
-  shootperiod: 0.1
-  changeperiod: 2
-  Xrotspeed: 30
+  shootperiod: 0.08
+  changeperiod: 0.8
+  Xrotspeed: 60
   Yrotspeed: 20
 --- !u!1001 &1463848412
 Prefab:
