@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class EnemySuperVortexFire : MonoBehaviour
 {
@@ -27,8 +28,8 @@ public class EnemySuperVortexFire : MonoBehaviour
     {
         tr = GetComponent<Transform>();
 
-        StartCoroutine(GenerateFireSources());
-        StartCoroutine(Fire());
+        GenerateFireSources();
+        FireAll();
         //StartCoroutine(RotateDammyPos());
     }
 
@@ -43,37 +44,33 @@ public class EnemySuperVortexFire : MonoBehaviour
         return Quaternion.AngleAxis(phi, transform.up) * Quaternion.AngleAxis(theta, transform.forward) * transform.up;
     }
     
-    IEnumerator GenerateFireSources()
+    void GenerateFireSources()
     {
 
-        if (NFireSource < 2 || NRow == 0) yield break;
+        if (NFireSource < 2 || NRow == 0) return;
 
         FireSources = new GameObject[NFireSource];
 
-        FireSources[0] = Instantiate(FireSource, transform.position + transform.up * Radius, Quaternion.LookRotation(transform.up));
-        yield return null;
+        // Generate Points on Sphere
+        // http://d.hatena.ne.jp/MikuHatsune/20160714/1468397633
 
-        FireSources[1] = Instantiate(FireSource, transform.position - transform.up * Radius, Quaternion.LookRotation(-transform.up));
-        yield return null;
+        FireSources[0] = Instantiate(FireSource, transform.position - transform.up * Radius, Quaternion.LookRotation(-transform.up));
 
-        var NCol = (NFireSource - 2) / NRow;
-        var Dtheta = 180.0f / (NRow + 1);
-        var Dphi = 360.0f / NCol;
-        var index = 2;
-
-        for (var row = 0; row < NRow; row++)
+        var phi = 0.0f;
+        var sqN = Mathf.Sqrt(NFireSource);
+        for (var i = 2; i < NFireSource; i++)
         {
-            var ini = Dphi / 2 * (row % 2);
-            for (var i = 0; i < NCol; i++)
-            {
-                //var pos = transform.position + (Quaternion.AngleAxis(ini + Dtheta * i, transform.up) * Quaternion.AngleAxis(Dphi * (row + 1), transform.forward) * transform.up * Radius);
-                var pos = transform.position + PointOnUnitSphere(Dtheta*(row+1), ini + Dphi*i, transform) * Radius;
-                var rot = Quaternion.LookRotation(pos - transform.position);
-                FireSources[index] = Instantiate(FireSource, pos, rot);
-                yield return null;
-                index++;
-            }
+            var hk = 2 * (i - 1.0f) / (NFireSource - 1.0f) - 1.0f;
+            var theta = Mathf.Acos(hk);
+            var sqhk = Mathf.Sqrt(1 - hk * hk);
+            phi = phi + 3.6f / sqN * 1.0f / sqhk;
+            var pos = transform.position + PointOnUnitSphere(theta / Mathf.PI * 180, phi / Mathf.PI * 180, transform) * Radius;
+            var rot = Quaternion.LookRotation(pos - transform.position);
+            FireSources[i - 1] = Instantiate(FireSource, pos, rot);
         }
+
+        FireSources[NFireSource - 1] = Instantiate(FireSource, transform.position + transform.up * Radius, Quaternion.LookRotation(transform.up));
+
     }
 
     IEnumerator RotateDammyPos()
@@ -105,17 +102,16 @@ public class EnemySuperVortexFire : MonoBehaviour
         }
     }
 
-    IEnumerator Fire()
+    void FireAll()
     {
-        while (true)
+        foreach (var source in FireSources)
         {
-            for (int i = 0; i < FireSources.Length; i++)
-            {
-                Instantiate(bullet, FireSources[i].transform.position, FireSources[i].transform.rotation);
-                yield return null;
-            }
-            yield return new WaitForSeconds(shootperiod);
+            var script = source.GetComponent<FireSourceCtrl>();
+            script.bullet = bullet;
+            script.shootperiod = shootperiod;
+            script.Fire();
         }
     }
+
     
 }

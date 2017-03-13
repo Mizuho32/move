@@ -42,8 +42,8 @@ public class PlayerMove : MonoBehaviour
             GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
-        Debug.Log("H=" + h.ToString());
-        Debug.Log("V=" + v.ToString());
+        //Debug.Log("H=" + h.ToString());
+        //Debug.Log("V=" + v.ToString());
 
         tr.Translate(Vector3.forward * moveSpeed * speed * Time.deltaTime);
         tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime);

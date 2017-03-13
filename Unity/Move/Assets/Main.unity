@@ -3485,7 +3485,7 @@ MonoBehaviour:
   - {fileID: 2137187246}
   - {fileID: 1722355003}
   - {fileID: 1128023138}
-  shootperiod: 0.015
+  shootperiod: 0.08
   changeperiod: 0.1
   Xrotspeed: 5
   Yrotspeed: 5

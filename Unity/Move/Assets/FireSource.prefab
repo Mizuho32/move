@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4681300332858586}
   - component: {fileID: 33859022912216370}
   - component: {fileID: 23101715983999516}
+  - component: {fileID: 114826900649790262}
   m_Layer: 0
   m_Name: FireSource
   m_TagString: Untagged
@@ -79,3 +80,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1639991171406412}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114826900649790262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639991171406412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce3ef4ddf0d5fa4ca0f5e805b42d66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
