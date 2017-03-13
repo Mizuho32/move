@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class FireCtrl : MonoBehaviour
 {
     public GameObject bullet;
-    public Transform firepos;
+    public Transform[] fireposs;
+    public float fireperiod = 0.5f;
+
+    private Coroutine firing;
+    private bool fire = false;
 
     // Use this for initialization
     void Start()
@@ -18,18 +23,36 @@ public class FireCtrl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Fire();
+            firing = StartCoroutine(Fire());
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            fire = false;
+            StopCoroutine(firing);
         }
     }
 
-    void Fire()
+    IEnumerator Fire()
     {
-        StartCoroutine(this.CreateBullet());
+        fire = true;
+        while (fire)
+        {
+            foreach (var firepos in fireposs)
+            {
+                Instantiate(bullet, firepos.position, firepos.rotation);
+                yield return null;
+            }
+            yield return new WaitForSeconds(fireperiod);
+        }
     }
 
     IEnumerator CreateBullet()
     {
-        Instantiate(bullet, firepos.position, firepos.rotation);
-        yield return null;
+        foreach (var firepos in fireposs)
+        {
+            Instantiate(bullet, firepos.position, firepos.rotation);
+            yield return null;
+        }
     }
 }
