@@ -8,12 +8,12 @@ public class EnemyNormalBullet : MonoBehaviour
     public float speed = 1000.0f;
     public float bigspeed = 1.0f;
     public float maxScale = 10.0f;
-    private Transform tr;
+    private Rigidbody rig;
     // Use this for initialization
     void Start()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * speed);
-        tr = GetComponent<Transform>();
+        rig = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame

@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3428,7 +3428,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1432087805}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2174074bd23ca6f439a3c864b9d19744, type: 3}
   m_Name: 
@@ -3467,6 +3467,10 @@ MonoBehaviour:
   - {fileID: 2033026875}
   - {fileID: 1161394618}
   bullet: {fileID: 1337343683246726, guid: 22cd9e1e660b57a42a480d916a8055c8, type: 2}
+  FireSource: {fileID: 1639991171406412, guid: 4c303fcca01dffa45a71ba9dc3191824, type: 2}
+  NFireSource: 32
+  NRow: 5
+  Radius: 5
   dammyposX:
   - {fileID: 241852496}
   - {fileID: 503807823}
@@ -3481,10 +3485,10 @@ MonoBehaviour:
   - {fileID: 2137187246}
   - {fileID: 1722355003}
   - {fileID: 1128023138}
-  shootperiod: 0.08
-  changeperiod: 0.8
-  Xrotspeed: 60
-  Yrotspeed: 20
+  shootperiod: 0.015
+  changeperiod: 0.1
+  Xrotspeed: 5
+  Yrotspeed: 5
 --- !u!1001 &1463848412
 Prefab:
   m_ObjectHideFlags: 0
