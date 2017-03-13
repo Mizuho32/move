@@ -8,6 +8,7 @@ public class FireSourceCtrl : MonoBehaviour {
     public float shootperiod = 0.1f;
 
     private bool fire = false;
+    private Coroutine firing;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class FireSourceCtrl : MonoBehaviour {
     public void Stop()
     {
         fire = false;
+        StopCoroutine(firing);
     }
 
     public void Fire()
@@ -29,7 +31,7 @@ public class FireSourceCtrl : MonoBehaviour {
         fire = true;
         if (bullet == null) Debug.LogError("bullet is Null");
 
-        StartCoroutine(_Fire());
+        firing = StartCoroutine(_Fire());
     }
 
     private IEnumerator _Fire()

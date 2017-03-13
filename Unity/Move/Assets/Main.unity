@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 68331246}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,35 +392,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &131769563
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 131769564}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposY (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &131769564
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 131769563}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1213652494}
-  m_Father: {fileID: 503807823}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &137004834 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
@@ -666,48 +637,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &204706295
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 204706296}
-  - component: {fileID: 204706297}
-  m_Layer: 0
-  m_Name: SuperVortexFirepos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &204706296
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204706295}
-  m_LocalRotation: {x: -4.058507e-11, y: -0.0000000074505797, z: 4.6388926e-10, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 338915785}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &204706297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204706295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0e71d614862f45aa51977d1b45dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color: {r: 1, g: 0, b: 0, a: 1}
-  _radius: 0.1
 --- !u!1 &205566174
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,35 +848,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230152156}
---- !u!1 &241852495
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 241852496}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposX
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &241852496
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 241852495}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 338915785}
-  m_Father: {fileID: 1432087810}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &296289000 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
@@ -999,35 +899,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &309397078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 309397079}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposX (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &309397079
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 309397078}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 644150075}
-  m_Father: {fileID: 1432087810}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &310875092
 Prefab:
   m_ObjectHideFlags: 0
@@ -1074,35 +945,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &338915784
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 338915785}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposY
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &338915785
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 338915784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 204706296}
-  m_Father: {fileID: 241852496}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &382102862 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
@@ -1272,35 +1114,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 1544408353}
---- !u!1 &503807822
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 503807823}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposX (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &503807823
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 503807822}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 131769564}
-  m_Father: {fileID: 1432087810}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1001 &507079296
 Prefab:
   m_ObjectHideFlags: 0
@@ -1566,35 +1379,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 1314201528}
---- !u!1 &644150074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 644150075}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposY (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &644150075
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 644150074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1185711057}
-  m_Father: {fileID: 309397079}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &646909859 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
@@ -1646,48 +1430,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &653434155
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 653434156}
-  - component: {fileID: 653434157}
-  m_Layer: 0
-  m_Name: VortexFirepos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &653434156
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 653434155}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2047773484}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &653434157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 653434155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0e71d614862f45aa51977d1b45dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color: {r: 1, g: 0, b: 0, a: 1}
-  _radius: 0.1
 --- !u!1001 &663408283
 Prefab:
   m_ObjectHideFlags: 0
@@ -1739,35 +1481,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 723200642}
---- !u!1 &699705799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 699705800}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposX (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &699705800
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 699705799}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1128023138}
-  m_Father: {fileID: 1432087810}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &723200642
 Prefab:
   m_ObjectHideFlags: 0
@@ -2444,64 +2157,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 1344639969}
---- !u!1 &1088397034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1088397035}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposX (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1088397035
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1088397034}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2137187246}
-  m_Father: {fileID: 1432087810}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!1 &1092835543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1092835544}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposX (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1092835544
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1092835543}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1722355003}
-  m_Father: {fileID: 1432087810}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1097201362 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
@@ -2553,82 +2208,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1128023137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1128023138}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposY (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1128023138
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1128023137}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1161394618}
-  m_Father: {fileID: 699705800}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &1138706934 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 157767350}
---- !u!1 &1161394617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1161394618}
-  - component: {fileID: 1161394619}
-  m_Layer: 0
-  m_Name: SuperVortexFirepos (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1161394618
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1161394617}
-  m_LocalRotation: {x: -4.058507e-11, y: -0.0000000074505797, z: 4.6388926e-10, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1128023138}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1161394619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1161394617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0e71d614862f45aa51977d1b45dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color: {r: 1, g: 0, b: 0, a: 1}
-  _radius: 0.1
 --- !u!1001 &1165628053
 Prefab:
   m_ObjectHideFlags: 0
@@ -2772,48 +2356,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 1058764995}
---- !u!1 &1185711056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1185711057}
-  - component: {fileID: 1185711058}
-  m_Layer: 0
-  m_Name: SuperVortexFirepos (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1185711057
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185711056}
-  m_LocalRotation: {x: -4.058507e-11, y: -0.0000000074505797, z: 4.6388926e-10, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 644150075}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1185711058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185711056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0e71d614862f45aa51977d1b45dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color: {r: 1, g: 0, b: 0, a: 1}
-  _radius: 0.1
 --- !u!1001 &1210095402
 Prefab:
   m_ObjectHideFlags: 0
@@ -2865,48 +2407,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 1904462024}
---- !u!1 &1213652493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1213652494}
-  - component: {fileID: 1213652495}
-  m_Layer: 0
-  m_Name: SuperVortexFirepos (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1213652494
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1213652493}
-  m_LocalRotation: {x: -4.058507e-11, y: -0.0000000074505797, z: 4.6388926e-10, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 131769564}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1213652495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1213652493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0e71d614862f45aa51977d1b45dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color: {r: 1, g: 0, b: 0, a: 1}
-  _radius: 0.1
 --- !u!4 &1214844021 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
@@ -3051,35 +2551,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1262941056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1262941057}
-  m_Layer: 0
-  m_Name: dammyposX
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1262941057
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1262941056}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2047773484}
-  m_Father: {fileID: 1432087810}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1286886233
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +2782,7 @@ GameObject:
   - component: {fileID: 1432087812}
   - component: {fileID: 1432087813}
   - component: {fileID: 1432087814}
+  - component: {fileID: 1432087815}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -3329,10 +2801,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de08cd9c265900b48a84a4e7a33e7e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firepos: {fileID: 653434156}
+  firepos: {fileID: 0}
   bullet: {fileID: 1538959945521580, guid: a09f8c757e05b0d49a276cb8524e4bbd, type: 2}
-  dammyposX: {fileID: 1262941057}
-  dammyposY: {fileID: 2047773484}
+  dammyposX: {fileID: 0}
+  dammyposY: {fileID: 0}
   shootperiod: 0.1
   Xrotspeed: 0
   Yrotspeed: 0
@@ -3397,14 +2869,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1262941057}
-  - {fileID: 1901741654}
-  - {fileID: 241852496}
-  - {fileID: 503807823}
-  - {fileID: 309397079}
-  - {fileID: 1088397035}
-  - {fileID: 1092835544}
-  - {fileID: 699705800}
+  - {fileID: 1549145283}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -3419,7 +2884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c03886945942645812eaf188c6b4f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firepos: {fileID: 1901741654}
+  firepos: {fileID: 0}
   bullet: {fileID: 1421522402426252, guid: 738c2c3ac43ee884d960ac210d2b3682, type: 2}
   shootperiod: 0.05
 --- !u!114 &1432087812
@@ -3433,7 +2898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2174074bd23ca6f439a3c864b9d19744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firepos: {fileID: 1901741654}
+  firepos: {fileID: 0}
   bullet: {fileID: 1605789848230122, guid: 8a7a2d75c95c5a24a812f2cbc069b1be, type: 2}
   shootperiod: 0.05
   count: 10
@@ -3459,36 +2924,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8d8edc8339ddd4b924a9ab5fdc6f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firepos:
-  - {fileID: 204706296}
-  - {fileID: 1213652494}
-  - {fileID: 1185711057}
-  - {fileID: 1668574720}
-  - {fileID: 2033026875}
-  - {fileID: 1161394618}
   bullet: {fileID: 1337343683246726, guid: 22cd9e1e660b57a42a480d916a8055c8, type: 2}
   FireSource: {fileID: 1639991171406412, guid: 4c303fcca01dffa45a71ba9dc3191824, type: 2}
   NFireSource: 32
-  NRow: 5
   Radius: 5
-  dammyposX:
-  - {fileID: 241852496}
-  - {fileID: 503807823}
-  - {fileID: 309397079}
-  - {fileID: 1088397035}
-  - {fileID: 1092835544}
-  - {fileID: 699705800}
-  dammyposY:
-  - {fileID: 338915785}
-  - {fileID: 131769564}
-  - {fileID: 644150075}
-  - {fileID: 2137187246}
-  - {fileID: 1722355003}
-  - {fileID: 1128023138}
-  shootperiod: 0.08
-  changeperiod: 0.1
-  Xrotspeed: 5
+  shootperiod: 0.1
+  moveperiod: 1
+  rotateperiod: 0.1
+  Xrotspeed: 100
   Yrotspeed: 5
+--- !u!54 &1432087815
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432087805}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1463848412
 Prefab:
   m_ObjectHideFlags: 0
@@ -3770,6 +3229,99 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1549145282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1549145283}
+  - component: {fileID: 1549145287}
+  - component: {fileID: 1549145286}
+  - component: {fileID: 1549145285}
+  - component: {fileID: 1549145284}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1549145283
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549145282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 80, y: 80, z: 80}
+  m_Children: []
+  m_Father: {fileID: 1432087810}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1549145284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549145282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbac5ec2c3183846a1f1163dd4ef439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1549145285
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549145282}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: dd858774effaffc44933edba9f9957df, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &1549145286
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549145282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1549145287
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549145282}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1549746288
 Prefab:
   m_ObjectHideFlags: 0
@@ -4199,48 +3751,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1668574719
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1668574720}
-  - component: {fileID: 1668574721}
-  m_Layer: 0
-  m_Name: SuperVortexFirepos (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1668574720
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1668574719}
-  m_LocalRotation: {x: -4.058507e-11, y: -0.0000000074505797, z: 4.6388926e-10, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2137187246}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1668574721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1668574719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0e71d614862f45aa51977d1b45dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color: {r: 1, g: 0, b: 0, a: 1}
-  _radius: 0.1
 --- !u!1001 &1682250362
 Prefab:
   m_ObjectHideFlags: 0
@@ -4384,35 +3894,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 778069352}
---- !u!1 &1722355002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1722355003}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposY (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1722355003
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1722355002}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2033026875}
-  m_Father: {fileID: 1092835544}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &1730488680 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
@@ -4550,48 +4031,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 507079296}
---- !u!1 &1901741653
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1901741654}
-  - component: {fileID: 1901741655}
-  m_Layer: 0
-  m_Name: Firepos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1901741654
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1901741653}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1432087810}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1901741655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1901741653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0e71d614862f45aa51977d1b45dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color: {r: 1, g: 0, b: 0, a: 1}
-  _radius: 0.1
 --- !u!1001 &1904462024
 Prefab:
   m_ObjectHideFlags: 0
@@ -4689,48 +4128,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 1694185026}
---- !u!1 &2033026874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2033026875}
-  - component: {fileID: 2033026876}
-  m_Layer: 0
-  m_Name: SuperVortexFirepos (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2033026875
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2033026874}
-  m_LocalRotation: {x: -4.058507e-11, y: -0.0000000074505797, z: 4.6388926e-10, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1722355003}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2033026876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2033026874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae0e71d614862f45aa51977d1b45dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color: {r: 1, g: 0, b: 0, a: 1}
-  _radius: 0.1
 --- !u!1001 &2044786319
 Prefab:
   m_ObjectHideFlags: 0
@@ -4777,35 +4174,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5233832a731abbe4eb37f3cd53766f83, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2047773483
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2047773484}
-  m_Layer: 0
-  m_Name: dammyposY
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2047773484
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2047773483}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 653434156}
-  m_Father: {fileID: 1262941057}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2050847637
 Prefab:
   m_ObjectHideFlags: 0
@@ -4908,32 +4276,3 @@ Transform:
   m_PrefabParentObject: {fileID: 4836550697486290, guid: 5233832a731abbe4eb37f3cd53766f83,
     type: 2}
   m_PrefabInternal: {fileID: 1080100396}
---- !u!1 &2137187245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2137187246}
-  m_Layer: 0
-  m_Name: SuperVortexdammyposY (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2137187246
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2137187245}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1668574720}
-  m_Father: {fileID: 1088397035}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

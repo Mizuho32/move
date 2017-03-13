@@ -23,6 +23,7 @@ public class EnemyCtrl : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            GetComponent<EnemySuperVortexFire>().StopAll();
         }
     }
 }

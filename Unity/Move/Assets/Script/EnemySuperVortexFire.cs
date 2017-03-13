@@ -6,30 +6,30 @@ using System.Linq;
 public class EnemySuperVortexFire : MonoBehaviour
 {
 
-    public Transform[] firepos;
     public GameObject bullet;
     public GameObject FireSource;
     public int NFireSource;
-    public int NRow;
     public float Radius;
-    public Transform[] dammyposX;
-    public Transform[] dammyposY;
     public float shootperiod = 0.1f; //second
-    public float changeperiod = 2.0f;
+    public float moveperiod = 2.0f;
+    public float rotateperiod = 2.0f;
     public float Xrotspeed = 360.0f;
     public float Yrotspeed = 360.0f;
 
-    private Transform tr;
-    private float changesec = 0.0f;
     private GameObject[] FireSources;
+    private bool firestarted = false;
+    private Rigidbody rig;
+    private Transform tr;
+    private float time4rotate = 0;
 
     // Use this for initialization
     void Start()
     {
+        rig = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
 
         GenerateFireSources();
-        FireAll();
+        //FireAll();
         //StartCoroutine(RotateDammyPos());
     }
 
@@ -47,7 +47,7 @@ public class EnemySuperVortexFire : MonoBehaviour
     void GenerateFireSources()
     {
 
-        if (NFireSource < 2 || NRow == 0) return;
+        if (NFireSource < 2) return;
 
         FireSources = new GameObject[NFireSource];
 
@@ -71,38 +71,44 @@ public class EnemySuperVortexFire : MonoBehaviour
 
         FireSources[NFireSource - 1] = Instantiate(FireSource, transform.position + transform.up * Radius, Quaternion.LookRotation(transform.up));
 
+        foreach (var source in FireSources)
+            source.transform.parent = transform;
+
     }
 
-    IEnumerator RotateDammyPos()
+    public void StartFire()
+    {
+        if (firestarted) return;
+
+        FireAll();
+        StartCoroutine(Move());
+        StartCoroutine(Rotate());
+
+        firestarted = true;
+    }
+
+    private IEnumerator Rotate()
     {
         while (true)
         {
-            var axis = Random.onUnitSphere;
-            for (var i = 0; i < dammyposX.Length; i++)
-            {
-                //if (changesec < changeperiod / 4)
-                //{
-                dammyposX[i].Rotate(axis, Xrotspeed);
-                dammyposY[i].Rotate(transform.up, Yrotspeed);
-                //}
-                //else if (changesec < changeperiod / 2)
-                //{
-                //    dammyposY[i].Rotate(transform.up, Yrotspeed * Time.deltaTime);
-                //}
-                //else if (changesec < 3 * changeperiod / 4)
-                //{
-                //    dammyposX[i].Rotate(transform.right, -Xrotspeed * Time.deltaTime);
-                //}
-                //else
-                //{
-                //    dammyposY[i].Rotate(transform.up, -Yrotspeed * Time.deltaTime);
-                //}
-            }
-            yield return new WaitForSeconds(changeperiod);
+            //tr.Rotate(0, Mathf.Sin(2*Mathf.PI*4*time4rotate*time4rotate) * 90, 0);
+            rig.AddTorque(0, Mathf.Sin(2 * Mathf.PI * 0.5f * time4rotate * time4rotate) * 90, 0.5f*Mathf.Sin(2 * Mathf.PI * 0.5f * time4rotate * time4rotate) * 90);
+            time4rotate += Time.deltaTime;
+            yield return new WaitForSeconds(rotateperiod);
+        }
+    }
+    private IEnumerator Move()
+    {
+        while (true)
+        {
+            //transform.Translate(Random.onUnitSphere * Xrotspeed);
+            //rig.velocity = Random.onUnitSphere * Xrotspeed;
+            rig.AddForce(Random.onUnitSphere * Xrotspeed);
+            yield return new WaitForSeconds(moveperiod);
         }
     }
 
-    void FireAll()
+    public void FireAll()
     {
         foreach (var source in FireSources)
         {
@@ -112,6 +118,14 @@ public class EnemySuperVortexFire : MonoBehaviour
             script.Fire();
         }
     }
-
+    
+    public void StopAll()
+    {
+        foreach (var source in FireSources)
+        {
+            var script = source.GetComponent<FireSourceCtrl>();
+            script.Stop();
+        }
+    }
     
 }
